@@ -83,7 +83,6 @@ const Main = () => {
   // Used to save fetched issues
   useEffect(() => {
     if (!loading && !error && data) { // Only save issues state when done loading, no error, and data is valid
-      // TODO: 12/14/2020 Debounce real-time user typing to avoid firing several queries in a short period of time
       setPredictions(parseIssues(data));
     }
   }, [loading, error, data]); // Note: Run effect (after render) only when 'loading', 'error' or 'data' change

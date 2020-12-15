@@ -21,7 +21,8 @@ const authLink = setContext((_, { headers }) => {
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
+  shouldBatch: true, // Ref: https://www.apollographql.com/blog/query-batching-in-apollo-63acfd859862/
 });
 
 
