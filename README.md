@@ -1,18 +1,18 @@
 # GitHub Issue Search
 
 This application uses the [Github’s API](https://developer.github.com/) and an autocomplete input box for searching 
-issues for [React’s repo](https://github.com/facebook/react/issues). Input and results navigate via
-keyboard shortcuts. Each result displays the issue’s title and labels, plus more.
+issues for [React’s repo](https://github.com/facebook/react/issues). The user can navigate the input and results via
+keyboard shortcuts. 
 
 ## Summary of Requirements
-Write Application for searching issues from Facebook React's GitHub repository.
-* The UI shall support:
+Application for searching issues from Facebook React's GitHub repository.
+* The UI supports:
     * User search using an autocomplete input box.
     * Keyboard shortcuts for navigating the user input and results.
-* Use the GitHub API to query the user's search request.
-    * Query for issues from Facebook React's GitHub repository and retrieve issue’s title and labels.
+* Uses the GitHub API to query the user's search request.
+    * Queries for issues from Facebook React's GitHub repository and retrieve issue’s title and labels.
         * https://github.com/facebook/react/issues
-    * Each result should have, but not limited to, the issue’s title and labels.
+    * Each result displays the issue’s title and labels, plus more.
 
 ## Development
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
