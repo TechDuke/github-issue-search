@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Button, TextField, Divider } from '@material-ui/core';
 import { Autocomplete } from "@material-ui/lab";
-import { makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import { gql, useLazyQuery } from '@apollo/client';
 
 import "./Main.css";
-
 import { REPO_OWNER, REPO_NAME, NUM_DROPDOWN_ITEMS } from "../config";
 import { SearchResults } from "./SearchResults";
 
@@ -114,7 +113,6 @@ const Main = () => {
           id="controlled-demo"
           options={predictions}
           getOptionLabel={(option) => option}
-          // getOptionLabel={(option) => setOptionsLabel(option)}
           value={predictionValue}
           onChange={(event, newValue) =>
             setPredictionValue(newValue) // Handle user choice

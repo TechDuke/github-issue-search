@@ -113,7 +113,7 @@ const SearchResults = (props) => {
         <div className={classes.issue} key={i}>
           <h3>{x.title}</h3>
           <p>{x.text}</p>
-          <p>{x.url}</p>
+          <a href={x.url} >{x.url}</a>
           <h5>Labels</h5>
           <ul>
             {x.labels.map((name, j) => <li key={j}>{name}</li>)}

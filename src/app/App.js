@@ -7,11 +7,6 @@ import { GRAPHQL_URI, OAUTH_TOKEN } from '../config';
 import Main from './Main';
 import customTheme from './theme';
 
-// Ref: https://www.apollographql.com/docs/react/networking/authentication/
-
-// GitHub [OAuth token] Personal access token: c2f945a54c1006df1bbe5118cdf512ab231c0887
-// Ref: https://docs.github.com/en/free-pro-team@latest/graphql/guides/forming-calls-with-graphql#authenticating-with-graphql
-
 // Create ApolloClient for GraphQL queries
 const httpLink = createHttpLink({ uri: GRAPHQL_URI });
 const authLink = setContext((_, { headers }) => {
@@ -30,7 +25,7 @@ const client = new ApolloClient({
 });
 
 
-// Create our custom theme that is based on our palette colors
+// Create our custom Material-UI theme that is based on our palette colors
 const muiTheme = createMuiTheme(customTheme);
 
 /**
